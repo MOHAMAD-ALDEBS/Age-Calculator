@@ -3,26 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age calculator</title>
+    <title>Age Calculator - Premium Edition</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="stars"></div>
     <div class="container">
-
-        <h1>Age Calculator</h1>
+        <div class="header">
+            <h1>✨ Age Calculator ✨</h1>
+            <p class="subtitle">Discover every moment of your life</p>
+        </div>
 
         <div class="form">
-
             <label for="birthday">
-                Enter your birthday:
+                📅 Enter your birthday:
             </label>
+            <input type="date" id="birthday" name="birthday">
+            <button id="calculateBtn">
+                <span class="btn-text">Calculate Age</span>
+                <span class="btn-icon">🚀</span>
+            </button>
+        </div>
 
-             <input type="date" id="birthday" name="birthday">
+        <div id="result-container" class="result-container hidden">
+            <div class="age-display">
+                <div class="main-age">
+                    <span id="years" class="number">0</span>
+                    <span class="label">Years</span>
+                </div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="months">0</div>
+                    <div class="stat-label">Months</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="days">0</div>
+                    <div class="stat-label">Days</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="hours">0</div>
+                    <div class="stat-label">Hours</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="minutes">0</div>
+                    <div class="stat-label">Minutes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="seconds">0</div>
+                    <div class="stat-label">Seconds</div>
+                </div>
+            </div>
 
-
-            <button id="calculateBtn">Calculate Age</button>
-
-            <p id="result" > your age is .. </p>         
+            <div class="total-days">
+                <p>You've lived approximately <span id="total-days">0</span> days on Earth! 🌍</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
